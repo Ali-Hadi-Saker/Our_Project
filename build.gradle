@@ -35,3 +35,8 @@ dependencies {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+tasks.register('run', JavaExec) {
+	main = 'com.democrapp.vote.VoteApplication'
+	classpath = sourceSets.main.runtimeClasspath
+}
