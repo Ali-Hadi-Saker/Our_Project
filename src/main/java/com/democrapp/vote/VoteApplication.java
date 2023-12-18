@@ -20,8 +20,8 @@ public class VoteApplication implements CommandLineRunner {
 	}
 	@Override
 	public void run(String... args){
-		insertData();
-		movieRepository.findAllByCategory("porn-suspense").forEach(movie -> System.out.println(movie.toString()));
+		//insertData();
+		movieRepository.findAll().forEach(movie -> System.out.println(movie.toString()));
 	}
 	public void insertData ()
 	{
